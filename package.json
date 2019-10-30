@@ -41,8 +41,8 @@
     "scripts/run.js"
   ],
   "install": {
-    "binaryName": "create-serverless-app",
-    "url": "https://github.com/jazztong/create-serverless-app/releases/download/v{{version}}/create-serverless-app_{{platform}}_{{arch}}.{{zipExt}}"
+    "binaryName": "csla",
+    "url": "https://github.com/jazztong/create-serverless-app/releases/download/v{{version}}/csla_{{platform}}_{{arch}}.{{zipExt}}"
   },
   "main": "index.js",
   "devDependencies": {}

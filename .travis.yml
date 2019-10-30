@@ -17,7 +17,7 @@ install:
   - npm install -g standard-version
 
 before_script:
-  - git remote set-url origin https://${GH_TOKEN}@github.com/jazztong/create-serverless-app.git > /dev/null 2>&1
+  - git remote set-url origin https://${GITHUB_TOKEN}@github.com/jazztong/csla.git > /dev/null 2>&1
   - git config --global user.email "jazz.twk@gmail.com"
   - git config --global user.name "Jazz Tong"
 

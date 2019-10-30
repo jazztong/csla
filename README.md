@@ -1,6 +1,6 @@
 # Create Serverless App
 
-[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme) [![Build Status](https://travis-ci.com/jazztong/create-serverless-app.svg?branch=master)](https://travis-ci.com/jazztong/create-serverless-app) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-0.1.2-red.svg)](https://conventionalcommits.org)
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme) [![Build Status](https://travis-ci.com/jazztong/csla.svg?branch=master)](https://travis-ci.com/jazztong/csla) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-0.1.2-red.svg)](https://conventionalcommits.org)
 
 > This is the generator to generate serverless app project template
 
