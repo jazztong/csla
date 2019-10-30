@@ -1,0 +1,49 @@
+{
+  "name": "csla",
+  "version": "0.2.39",
+  "description": "Create Serverless App is a tool to help you develop serverless app faster",
+  "bin": {
+    "csla": "scripts/run.js"
+  },
+  "scripts": {
+    "install": "node scripts/install.js install",
+    "preuninstall": "node scripts/install.js uninstall",
+    "debug": "node --nolazy --inspect-brk=9229 scripts/install.js install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jazztong/create-serverless-app.git"
+  },
+  "keywords": [
+    "serverless",
+    "cli",
+    "toolkit",
+    "lambda",
+    "aws",
+    "gcp",
+    "faas"
+  ],
+  "author": "Jazz Tong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jazztong/create-serverless-app/issues"
+  },
+  "homepage": "https://github.com/jazztong/create-serverless-app#readme",
+  "dependencies": {
+    "adm-zip": "^0.4.13",
+    "mkdirp": "^0.5.1",
+    "request": "^2.88.0",
+    "tar-fs": "^2.0.0",
+    "tmp": "^0.1.0"
+  },
+  "files": [
+    "scripts/install.js",
+    "scripts/run.js"
+  ],
+  "install": {
+    "binaryName": "create-serverless-app",
+    "url": "https://github.com/jazztong/create-serverless-app/releases/download/v{{version}}/create-serverless-app_{{platform}}_{{arch}}.{{zipExt}}"
+  },
+  "main": "index.js",
+  "devDependencies": {}
+}

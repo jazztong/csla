@@ -1,0 +1,48 @@
+dist: trusty
+
+sudo: required
+
+services:
+  - docker
+
+language: go
+
+go:
+  - "1.12.9"
+
+env:
+  - GO111MODULE=on
+
+install:
+  - npm install -g standard-version
+
+before_script:
+  - git remote set-url origin https://${GH_TOKEN}@github.com/jazztong/create-serverless-app.git > /dev/null 2>&1
+  - git config --global user.email "jazz.twk@gmail.com"
+  - git config --global user.name "Jazz Tong"
+
+script:
+  - make test
+  - go mod verify
+
+matrix:
+  fast_finish: true
+
+jobs:
+  include:
+    - stage: pump version and deploy
+      if: branch = master && commit_message !~ /chore\(release\)/
+      deploy:
+        - provider: script
+          skip_cleanup: true
+          script: make release
+        - provider: script
+          skip_cleanup: true
+          script: curl -sL https://git.io/goreleaser | bash
+        - provider: npm
+          skip_cleanup: true
+          email: jazz.twk@gmail.com
+          api_key: ${NPM_TOKEN}
+
+notifications:
+  slack: jazz-gjc6274:ObYbd9uV7FHOwekx72yVVrmk
