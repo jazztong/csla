@@ -3,12 +3,12 @@
 
 const request = require("request"),
   path = require("path"),
-  tmp = require('tmp'),
-  tar = require('tar-fs'),
+  tmp = require("tmp"),
+  tar = require("tar-fs"),
   zlib = require("zlib"),
   mkdirp = require("mkdirp"),
   fs = require("fs"),
-  AdmZip = require('adm-zip'),
+  AdmZip = require("adm-zip"),
   exec = require("child_process").exec;
 // Mapping from Node's `process.arch` to Golang `$GOARCH`
 const ARCH_MAPPING = {
@@ -27,7 +27,7 @@ const PLATFORM_MAPPING = {
 
 function getInstallationPath(callback) {
   // `npm bin` will output the path where binary files should be installed
-  exec("npm bin", function (err, stdout, stderr) {
+  exec("npm bin", function(err, stdout, stderr) {
     let dir = null;
     if (err || stderr || !stdout || stdout.length === 0) {
       // We couldn't infer path from `npm bin`. Let's try to get it from
@@ -54,7 +54,7 @@ function verifyAndPlaceBinary(binName, binPath, callback) {
       `Downloaded binary does not contain the binary specified in configuration - ${binName}`
     );
 
-  getInstallationPath(function (err, installationPath) {
+  getInstallationPath(function(err, installationPath) {
     if (err)
       return callback("Error getting binary installation path from `npm bin`");
 
@@ -102,7 +102,7 @@ function parsePackageJson() {
   if (!fs.existsSync(packageJsonPath)) {
     console.error(
       "Unable to find package.json. " +
-      "Please run this script at root of the package you want to be installed"
+        "Please run this script at root of the package you want to be installed"
     );
     return;
   }
@@ -141,7 +141,7 @@ function parsePackageJson() {
 }
 
 function zipExt() {
-  if (isWindow) {
+  if (isWindow()) {
     return "zip";
   }
   return "tar.gz";
@@ -176,7 +176,7 @@ function install(callback) {
     "error",
     callback.bind(null, "Error downloading from URL: " + opts.url)
   );
-  req.on("response", function (res) {
+  req.on("response", function(res) {
     if (res.statusCode !== 200)
       return callback(
         "Error downloading binary. HTTP Status Code: " + res.statusCode
@@ -184,12 +184,11 @@ function install(callback) {
     if (isWindow()) {
       // handler for window
       var tmpFile = tmp.fileSync();
-      req.pipe(fs.createWriteStream(tmpFile.name))
-        .on('finish', function () {
-          var zip = new AdmZip(tmpFile.name);
-          zip.extractAllTo(opts.binPath);
-          console.log("install successful");
-        })
+      req.pipe(fs.createWriteStream(tmpFile.name)).on("finish", function() {
+        var zip = new AdmZip(tmpFile.name);
+        zip.extractAllTo(opts.binPath);
+        console.log("install successful");
+      });
     } else {
       req.pipe(ungz).pipe(untar);
     }
@@ -198,7 +197,7 @@ function install(callback) {
 
 function uninstall(callback) {
   let opts = parsePackageJson();
-  getInstallationPath(function (err, installationPath) {
+  getInstallationPath(function(err, installationPath) {
     if (err) callback("Error finding binary installation directory");
 
     try {
@@ -227,7 +226,7 @@ if (argv && argv.length > 2) {
     process.exit(1);
   }
 
-  actions[cmd](function (err) {
+  actions[cmd](function(err) {
     if (err) {
       console.error(err);
       process.exit(1);

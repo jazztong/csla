@@ -6,7 +6,7 @@ var path = require("path");
 var os = require("os");
 var fs = require("fs");
 
-var homedir = path.join(__dirname, "../bin/create-serverless-app");
+var homedir = path.join(__dirname, "../bin/csla");
 var platform = os.platform();
 var arch = process.arch;
 
