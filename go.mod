@@ -1,4 +1,4 @@
-module github.com/jazztong/create-serverless-app
+module github.com/jazztong/csla
 
 go 1.12
 

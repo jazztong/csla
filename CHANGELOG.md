@@ -4,7 +4,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 0.2.40 (2019-10-30)
 
-
 ### Features
 
-* Initialize new base ([651e44e](https://github.com/jazztong/create-serverless-app/commit/651e44ecc90ed3b8195b8300cf053667885c8bb7))
+- Initialize new base ([651e44e](https://github.com/jazztong/csla/commit/651e44ecc90ed3b8195b8300cf053667885c8bb7))

@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jazztong/create-serverless-app.git"
+    "url": "git+https://github.com/jazztong/csla.git"
   },
   "keywords": [
     "serverless",
@@ -26,9 +26,9 @@
   "author": "Jazz Tong",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jazztong/create-serverless-app/issues"
+    "url": "https://github.com/jazztong/csla/issues"
   },
-  "homepage": "https://github.com/jazztong/create-serverless-app#readme",
+  "homepage": "https://github.com/jazztong/csla#readme",
   "dependencies": {
     "adm-zip": "^0.4.13",
     "mkdirp": "^0.5.1",
@@ -42,7 +42,7 @@
   ],
   "install": {
     "binaryName": "csla",
-    "url": "https://github.com/jazztong/create-serverless-app/releases/download/v{{version}}/csla_{{platform}}_{{arch}}.{{zipExt}}"
+    "url": "https://github.com/jazztong/csla/releases/download/v{{version}}/csla_{{platform}}_{{arch}}.{{zipExt}}"
   },
   "main": "index.js",
   "devDependencies": {}

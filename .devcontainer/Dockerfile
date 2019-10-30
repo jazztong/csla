@@ -12,6 +12,13 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
     && apt-get -y install --no-install-recommends apt-utils dialog 2>&1
 
+# Configure pip3
+RUN apt update \
+    && apt install -y python3-pip
+
+# python tools
+RUN pip3 install pre-commit
+
 # Install node and npm
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - \
     && apt-get install -y nodejs \
