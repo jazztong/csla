@@ -1,0 +1,7 @@
+test:
+	go get gotest.tools/gotestsum
+	gotestsum --junitfile test.xml --jsonfile report.json -- -coverprofile=coverage.out -race -v ./...
+	go mod tidy
+
+run:
+    go run main.go

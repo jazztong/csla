@@ -2,9 +2,7 @@
   "name": "Go",
   "dockerFile": "Dockerfile",
   // Specifies a list of ports the container should publish
-  // "appPort": [
-  // 	9000
-  // ],
+  "appPort": [9000],
   // "runArgs": [
   // 	// Comment out the next line to run as root instead. Linux users,
   // 	// update Dockerfile with your user's UID/GID if not 1000.

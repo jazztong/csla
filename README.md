@@ -31,7 +31,7 @@ npm i -g csla --unsafe-perm=true --allow-root
 ## Usage
 
 ```
-csla -name my-lambda
+csla new-app --name=MyApp --template=aws-api-lambda-golang
 ```
 
 ## Issue

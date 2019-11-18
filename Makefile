@@ -9,3 +9,6 @@ test:
 release:
 	standard-version
 	git push --follow-tags origin HEAD:master
+
+template:
+	go-bindata -o provider/fileloader/asset.go template/...

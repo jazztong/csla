@@ -9,6 +9,14 @@
       "program": "${workspaceFolder}"
     },
     {
+      "name": "Launch Main new-app",
+      "type": "go",
+      "request": "launch",
+      "mode": "debug",
+      "program": "${workspaceFolder}",
+      "args": ["new-app", "--name=newapi"]
+    },
+    {
       "name": "Launch via npm",
       "type": "node",
       "request": "launch",

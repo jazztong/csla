@@ -1,14 +1,7 @@
 package main
 
-import (
-	"fmt"
-	"log"
-
-	"github.com/golang/example/stringutil"
-)
+import "github.com/jazztong/csla/cmd"
 
 func main() {
-	log.Println("print log")
-	fmt.Println("hello world")
-	fmt.Println(stringutil.Reverse("hello"))
+	cmd.Execute()
 }
