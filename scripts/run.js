@@ -11,6 +11,6 @@ var platform = os.platform();
 var arch = process.arch;
 
 console.log(homedir);
-exec(homedir, [process.argv.slice(2)], {
+exec(homedir, [process.argv.slice(2).join(' ')], {
   stdio: "inherit"
 });

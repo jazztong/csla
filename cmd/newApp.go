@@ -9,7 +9,7 @@ import (
 )
 
 var newAppCmd = &cobra.Command{
-	Use:   "newapp",
+	Use:   "new-app",
 	Short: "Create new application --name=[name] --template=aws-api-lambda-golang",
 	Long:  `All software has versions. This is csla`,
 	Run: func(cmd *cobra.Command, args []string) {
