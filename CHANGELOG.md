@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/jazztong/csla/compare/v0.0.4...v0.0.5) (2019-11-19)
+
+
+### Bug Fixes
+
+* Fix npm forward argument ([be02e76](https://github.com/jazztong/csla/commit/be02e76434f0b891f47c399deb18532ffde45a6e))
+
 ### [0.0.4](https://github.com/jazztong/csla/compare/v0.0.3...v0.0.4) (2019-11-19)
 
 
