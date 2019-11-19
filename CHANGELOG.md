@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/jazztong/csla/compare/v0.0.3...v0.0.4) (2019-11-19)
+
+
+### Bug Fixes
+
+* Fix args parse wrongly using npm run.js ([c5f54ce](https://github.com/jazztong/csla/commit/c5f54ce9db7d19f881f0742ae68589e345df7e70))
+
 ### [0.0.3](https://github.com/jazztong/csla/compare/v0.0.2...v0.0.3) (2019-11-19)
 
 
