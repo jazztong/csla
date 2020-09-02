@@ -1,6 +1,6 @@
 {
   "name": "csla",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Create Serverless App is a tool to help you develop serverless app faster",
   "bin": {
     "csla": "scripts/run.js"
